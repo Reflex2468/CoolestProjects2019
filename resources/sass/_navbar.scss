@@ -1,0 +1,13 @@
+.coderdojo-logo {
+  max-width: 256px;
+
+  &.small {
+    width: 128px;
+  }
+  &.medium {
+    width: 196px;
+  }
+  &.large {
+    width: 256px;
+  }
+}
