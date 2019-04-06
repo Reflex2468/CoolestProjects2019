@@ -14,3 +14,11 @@
 Route::get('/', 'IndexController@index');
 Route::get('/login', 'IndexController@login');
 Route::get('/register', 'IndexController@register');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

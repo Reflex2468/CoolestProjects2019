@@ -4,7 +4,7 @@
     <div class="container mt-3">
         <div>
 
-            <div class="uk-h3">Projecten</div>
+            w
 
             <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: pull; autoplay: true; autoplay-interval: 6000">
 
