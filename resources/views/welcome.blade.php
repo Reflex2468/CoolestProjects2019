@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
+@section('pageTitle', 'Projects')
+
 @section('content')
     <div class="container mt-3">
         <div>
-
-            w
 
             <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: pull; autoplay: true; autoplay-interval: 6000">
 
