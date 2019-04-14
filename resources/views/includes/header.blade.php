@@ -31,9 +31,10 @@
                     <div class="uk-navbar-dropdown">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
                             <li class="uk-nav-header">Profiel</li>
-                            <li><a href="#">Donker Thema</a></li>
-                            <li><a href="#">Project Plaatsen</a></li>
-                            <li><a href="#">Gelikete Projecten</a></li>
+                            <li><a href="#">Donker thema</a></li>
+                            <li><a href="#">Project plaatsen</a></li>
+                            <li><a href="#">Mijn projecten</a></li>
+                            <li><a href="#">Gelikete projecten</a></li>
                             <li class="uk-nav-divider"></li>
                             <li>
                                 <a href="{{ route('logout') }}" onclick="event.preventDefault();
