@@ -11,5 +11,35 @@
 @import 'navbar';
 
 body {
-  background-color: transparent !important;
+  min-height: 100vh;
+  &:not(.dark) {
+    background-color: transparent !important;
+    .dark-only {
+      display: none;
+    }
+  }
+  &.dark {
+    background-color: #333 !important;
+    nav {
+      background: #222 !important;
+
+      & > ul > li > a {
+        color: #eee !important;
+      }
+
+      .uk-navbar-dropdown {
+        background: #222 !important;
+        color: #ccc !important;
+        .uk-nav-header {
+          color: #fff !important;
+        }
+      }
+    }
+    #footer {
+      background: #222 !important;
+    }
+    .light-only {
+      display: none;
+    }
+  }
 }

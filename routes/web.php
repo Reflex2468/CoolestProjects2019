@@ -11,14 +11,13 @@
 |
 */
 
-Route::get('/', 'IndexController@index');
+Route::get('/', 'IndexController@index')->name('index');
 Route::get('/login', 'IndexController@login');
 Route::get('/register', 'IndexController@register');
+Route::get('/get-projects', 'IndexController@getProjects');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/set-theme', 'IndexController@setTheme')->name('setTheme');

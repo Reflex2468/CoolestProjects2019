@@ -3,8 +3,12 @@
 
         <ul class="uk-navbar-nav">
             <li class="uk-active">
-                <a href="./">
+                <a href="./" class="light-only">
                     <img class="coderdojo-logo small" src="{{ asset('images/coderdojo_logo.png') }}"
+                         alt="Logo CoderDojo">
+                </a>
+                <a href="./" class="dark-only">
+                    <img class="coderdojo-logo small" src="{{ asset('images/coderdojo_logo_white.png') }}"
                          alt="Logo CoderDojo">
                 </a>
             </li>
@@ -31,7 +35,16 @@
                     <div class="uk-navbar-dropdown">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
                             <li class="uk-nav-header">Profiel</li>
-                            <li><a href="#">Donker Thema</a></li>
+                            <li>
+                                <a href="{{ route('setTheme') }}" onclick="event.preventDefault();
+                                 document.getElementById('theme-form').submit();">
+                                    @if(Auth::user()->dark_theme)
+                                        <i class="fas fa-sun"></i>&nbsp;&nbsp;Licht
+                                    @else
+                                        <i class="fas fa-moon"></i>&nbsp;&nbsp;Donker
+                                    @endif
+                                </a>
+                            </li>
                             <li><a href="#">Project Plaatsen</a></li>
                             <li><a href="#">Gelikete Projecten</a></li>
                             <li class="uk-nav-divider"></li>
@@ -48,6 +61,10 @@
 
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
+                </form>
+                <form id="theme-form" action="{{ route('setTheme') }}" method="POST" style="display: none;">
+                    @csrf
+                    <input type="hidden" value="{{ Auth::user()->dark_theme ? 0 : 1}}" name="theme">
                 </form>
             @endguest
         </ul>
