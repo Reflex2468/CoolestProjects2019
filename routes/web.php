@@ -16,6 +16,13 @@ Route::get('/login', 'IndexController@login');
 Route::get('/register', 'IndexController@register');
 Route::get('/get-projects', 'IndexController@getProjects');
 
+Route::prefix('user')->group(function(){
+    Route::get('add-project', 'UserController@addProject')->name('addProject');
+    Route::post('add-project', 'UserController@postAddProject')->name('postAddProject');
+    Route::get('settings', 'UserController@settings')->name('settings');
+    Route::get('liked-projects', 'UserController@likedProjects')->name('likedProjects');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

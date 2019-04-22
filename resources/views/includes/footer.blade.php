@@ -8,6 +8,7 @@
             <ul>
                 <li>Xavier Coppens</li>
                 <li>Neal Joos</li>
+                <li>Bart De Roy</li>
             </ul>
         </div>
     </div>
