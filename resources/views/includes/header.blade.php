@@ -3,11 +3,11 @@
 
         <ul class="uk-navbar-nav">
             <li class="uk-active">
-                <a href="./" class="light-only">
+                <a href="/" class="light-only">
                     <img class="coderdojo-logo small" src="{{ asset('images/coderdojo_logo.png') }}"
                          alt="Logo CoderDojo">
                 </a>
-                <a href="./" class="dark-only">
+                <a href="/" class="dark-only">
                     <img class="coderdojo-logo small" src="{{ asset('images/coderdojo_logo_white.png') }}"
                          alt="Logo CoderDojo">
                 </a>
@@ -19,7 +19,7 @@
 
     <div class="uk-navbar-right">
         <ul class="uk-navbar-nav" >
-            <li><a href="./">Projecten</a></li>
+            <li><a href="/">Projecten</a></li>
             @guest
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -45,8 +45,8 @@
                                     @endif
                                 </a>
                             </li>
-                            <li><a href="#">Project Plaatsen</a></li>
-                            <li><a href="#">Gelikete Projecten</a></li>
+                            <li><a href="{{route('addProject')}}">Project Plaatsen</a></li>
+{{--                            <li><a href="#">Gelikete Projecten</a></li>--}}
                             <li class="uk-nav-divider"></li>
                             <li>
                                 <a href="{{ route('logout') }}" onclick="event.preventDefault();
