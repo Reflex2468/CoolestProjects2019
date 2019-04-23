@@ -13,12 +13,9 @@ class UserController extends Controller
     }
 
     public function postAddProject(Request $request) {
-        $project = new Project();
-        $project->title = $request->get('title');
-        $project->description = $request->get('description');
-        $project->path_to_thumbnail = "placeholder";
-        $project->user_id = Auth::user()->id;
+        $project = Project::getFromURL($request->get('url'));
         $project->save();
+
         return redirect('/');
     }
 }

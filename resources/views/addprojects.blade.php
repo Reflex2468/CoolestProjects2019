@@ -8,12 +8,9 @@
             @csrf
             <legend class="uk-legend">Nieuw Project</legend>
             <div class="uk-margin">
-                <input class="uk-input" type="text" placeholder="titel" name="title">
+                <label for="url">Link naar het project</label>
+                <input id="url" class="uk-input" type="text" placeholder="vb. https://scratch.mit.edu/projects/303723397/" name="url">
             </div>
-            <div class="uk-margin">
-                <textarea class="uk-textarea" rows="5" placeholder="beschrijving" name="description"></textarea>
-            </div>
-
             <button type="submit" class="uk-button uk-button-primary">project toevoegen</button>
         </form>
     </div>
