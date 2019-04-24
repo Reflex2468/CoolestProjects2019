@@ -15,6 +15,7 @@ Route::get('/', 'IndexController@index')->name('index');
 Route::get('/login', 'IndexController@login');
 Route::get('/register', 'IndexController@register');
 Route::get('/get-projects/{page}', 'IndexController@getProjects');
+Route::get('/get-project/{project_id}', 'IndexController@getProject');
 
 Route::prefix('user')->group(function(){
     Route::get('add-project', 'UserController@addProject')->name('addProject');

@@ -32,10 +32,20 @@ class IndexController extends Controller
     }
 
 
-    public function getProjects($project_id) {
+    public function getProject($project_id) {
         $url = "https://api.scratch.mit.edu/users/cdjeeklo/projects/{$project_id}";
         $contents = file_get_contents($url);
         $contents = json_decode($contents, true);
         return $contents;
+    }
+
+    public function getProjects($page){
+        $url = "https://scratch.mit.edu/users/cdjeeklo/projects?page={$page}";
+        $contents = file_get_contents($url);
+        libxml_use_internal_errors(true);
+        $dom = new \DOMDocument();
+        $dom->loadHTML($contents);
+        libxml_clear_errors();
+        dd($dom);
     }
 }
