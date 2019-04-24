@@ -142,8 +142,8 @@
 <script>
 
     window.onload = function() {
-        if ($(window).height() > ($('nav').height() + $('.container').height() + $('#footer').height() ) ) {
-            $('#footer').addClass('uk-position-bottom');
+        if ($(window).height() > ($('nav').height() + $('.container').height() + $('footer').height() ) ) {
+            $('footer').addClass('uk-position-bottom');
         }
     }
 
