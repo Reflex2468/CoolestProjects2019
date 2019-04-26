@@ -120,9 +120,9 @@
                 <div class="col-md-4">
                     <h3>Informatie</h3>
                     <ul>
-                        <li class="nowrap"><a href="https://www.facebook.com/groups/635078973250800/">facebook-pagina</a></li>
-                        <li class="nowrap"><a href="https://github.com/Reflex2468/CoolestProjects2019">github-pagina</a></li>
-                        <li class="nowrap"><a href="https://www.coolestprojects.be/">Coolest Projects</a></li>
+                        <li class="nowrap"><a href="https://www.facebook.com/groups/635078973250800/" target="_blank">Facebook-pagina</a></li>
+                        <li class="nowrap"><a href="https://github.com/Reflex2468/CoolestProjects2019" target="_blank">GitHub-pagina</a></li>
+                        <li class="nowrap"><a href="https://www.coolestprojects.be/" target="_blank">Coolest Projects</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">

@@ -11,7 +11,7 @@
                     <h3>{{$project->title}}</h3>
                     <p>
                         @if($project->description === "lorem ipsum")
-                            klik <a class="text-info" href="{{$project->getURL()}}">hier</a> om het project te bekijken.
+                            Klik <a class="text-info" href="{{$project->getURL()}}" target="_blank">hier</a> om het project te bekijken.
                         @else
                             {{$project->description}}
                         @endif
