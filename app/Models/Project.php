@@ -23,6 +23,10 @@ class Project extends Model
         return "https://scratch.mit.edu/projects/{$this->getProjectId()}/";
     }
 
+    public function getEmbed() {
+        return "<iframe src='{$this->getURL()}embed' allowtransparency='true' width='485' height='402' frameborder='0' scrolling='no' allowfullscreen></iframe>";
+    }
+
     public static function getFromURL($url) {
         $project_id = preg_replace('/^.*projects\/([\d]+)\/$/', '$1', $url);
         $contents = file_get_contents("https://api.scratch.mit.edu/users/cdjeeklo/projects/{$project_id}");

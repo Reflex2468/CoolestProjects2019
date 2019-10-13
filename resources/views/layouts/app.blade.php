@@ -16,9 +16,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     </head>
-    <body class="{{Auth::guest() ? "light" : (Auth::user()->dark_theme ? "dark" : "light") }}">
+    <body class="{{Auth::guest() ? "light" : (Auth::user()->dark_theme ? "dark" : "light") }}" id="app">
         @include('includes.header')
-
+        
         @yield('content')
 
         @include('includes.footer')
@@ -27,5 +27,6 @@
             src="https://code.jquery.com/jquery-3.4.0.min.js"
             integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
             crossorigin="anonymous"></script>
+    <script src="{{asset("js/app.js")}}"></script>
     @yield('javascript')
 </html>
