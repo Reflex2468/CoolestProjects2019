@@ -17,6 +17,8 @@ Route::get('/register', 'IndexController@register');
 Route::get('/get-projects/{page}', 'IndexController@getProjects');
 Route::get('/get-project/{project_id}', 'IndexController@getProject');
 
+Route::post('/like/{project_id}', 'IndexController@likeProject')->name('like');
+
 Route::prefix('user')->group(function(){
     Route::get('add-project', 'UserController@addProject')->name('addProject');
     Route::post('add-project', 'UserController@postAddProject')->name('postAddProject');

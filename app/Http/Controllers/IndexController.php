@@ -23,6 +23,12 @@ class IndexController extends Controller
         return view('register');
     }
 
+    public function likeProject($project_id) {
+        $project = Project::where('id', '=', $project_id)->get()->first();
+        $project->toggleLiked();
+        return redirect(route('index'));
+    }
+
     public function setTheme() {
         $user = Auth::user();
         $user->dark_theme = request()->input('theme');

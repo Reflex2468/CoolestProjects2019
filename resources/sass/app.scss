@@ -10,6 +10,11 @@
 
 @import 'navbar';
 
+iframe {
+    width: 100%;
+    min-height: 300px;
+}
+
 body {
   min-height: 100vh;
   &:not(.dark) {

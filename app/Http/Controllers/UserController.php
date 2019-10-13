@@ -13,7 +13,7 @@ class UserController extends Controller
     }
 
     public function postAddProject(Request $request) {
-        $project = Project::getFromURL($request->get('url'));
+        $project = Project::getFromURL($request->get('user'), $request->get('url'));
         $project->save();
 
         return redirect('/');
